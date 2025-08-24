@@ -11,7 +11,7 @@ struct HabitChallenge: View {
   var body: some View {
     HStack {
       VStack(alignment: .leading, spacing: 10) {
-        Text("21-Day Habit Challenge \(Text("6").foregroundStyle(Palette.greenLight))\(Text("/21").foregroundStyle(Palette.blackLight))")
+        Text("21-Day Habit Challenge \(Text("6").foregroundStyle(Palette.green))\(Text("/21").foregroundStyle(Palette.blackLight))")
           .font(.headline.bold())
         
         Text("Drink 2L water")

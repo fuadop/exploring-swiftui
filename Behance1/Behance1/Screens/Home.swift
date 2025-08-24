@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct HomeScreen: View {
+  @State private var headerHeight: CGFloat = 240
+  
   var body: some View {
     ZStack {
       Palette.teal
@@ -16,37 +18,43 @@ struct HomeScreen: View {
       VStack {
         UnevenRoundedRectangle(bottomLeadingRadius: 40, bottomTrailingRadius: 40)
           .fill(Palette.greenLight)
-          .frame(maxHeight: 240)
+          .frame(height: headerHeight)
           .overlay {
             VStack(alignment: .leading) {
               HStack{
-                Text("Good Morning \(Text("Gizem!").bold())")
+                Text(headerHeight < 200 ? "\(Text("Home").bold())": "Good Morning \(Text("Gizem!").bold())")
                   .font(.title3)
                 
                 Spacer()
                 
                 Circle()
+                  .fill(Palette.green)
                   .frame(width: 40, height: 40)
+                  .overlay {
+                    Image(systemName: "person")
+                  }
               }
               
-              HStack {
-                Image("VitAi")
-                
-                VStack(alignment: .leading) {
-                  Text("You're doing great today!")
-                  Button {
-                    
-                  } label: {
-                    Text("Chat with VitAI \(Image(systemName: "sparkles"))")
-                      .font(.subheadline)
-                      .foregroundStyle(Palette.black)
+              if headerHeight >= 200 {
+                HStack {
+                  Image("VitAi")
+                  
+                  VStack(alignment: .leading) {
+                    Text("You're doing great today!")
+                    Button {
+                      
+                    } label: {
+                      Text("Chat with VitAI \(Image(systemName: "sparkles"))")
+                        .font(.subheadline)
+                        .foregroundStyle(Palette.black)
+                    }
+                    .padding(8)
+                    .background(Palette.white)
+                    .cornerRadius(10)
                   }
-                  .padding(8)
-                  .background(Palette.white)
-                  .cornerRadius(10)
+                  
+                  Spacer()
                 }
-                
-                Spacer()
               }
             }
             .padding()
@@ -65,11 +73,15 @@ struct HomeScreen: View {
           .padding()
         }
         .scrollIndicators(.hidden)
-        .onScrollGeometryChange(for: Bool.self) { geo in
-          print(geo)
-          return true
-        } action: { wasBeyondZero, isBeyondZero in
-          print("wasBeyondZero: \(wasBeyondZero), isBeyondZero: \(isBeyondZero)")
+        .onScrollGeometryChange(for: Double.self) { geo in
+          geo.contentOffset.y
+        } action: { _, new in
+          let h = (new / 500) * 110
+          let newHeight = headerHeight - h
+          
+          if newHeight >= 120 && newHeight <= 240 {
+            headerHeight = newHeight
+          }
         }
       }
       .frame(maxHeight: .infinity)
