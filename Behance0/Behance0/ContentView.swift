@@ -153,6 +153,9 @@ struct MetricCard : View {
   }
 }
 
+// Description to App (Color Picker by Sindre Sohrus)
+// Description: Link to Video explaining Aerospace
+
 struct HomePage : View {
   @State private var activeTab = 0
   
