@@ -12,6 +12,8 @@ struct Behance1App: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+              .colorScheme(.light)
+              // .font(.custom("Urbanist-VariableFont_wght", size: 24))
         }
     }
 }

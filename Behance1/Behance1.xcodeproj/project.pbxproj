@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0652C3052E5B27B400739D3A /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0652C3042E5B27B400739D3A /* Urbanist-VariableFont_wght.ttf */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0652C2CD2E5A343B00739D3A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,11 +31,25 @@
 		0652C2BE2E5A343A00739D3A /* Behance1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Behance1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0652C2CC2E5A343B00739D3A /* Behance1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Behance1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0652C2D62E5A343B00739D3A /* Behance1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Behance1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0652C3042E5B27B400739D3A /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0652C3072E5B281700739D3A /* Exceptions for "Behance1" folder in "Behance1" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0652C2BD2E5A343A00739D3A /* Behance1 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		0652C2C02E5A343A00739D3A /* Behance1 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0652C3072E5B281700739D3A /* Exceptions for "Behance1" folder in "Behance1" target */,
+			);
 			path = Behance1;
 			sourceTree = "<group>";
 		};
@@ -79,6 +97,7 @@
 				0652C2CF2E5A343B00739D3A /* Behance1Tests */,
 				0652C2D92E5A343B00739D3A /* Behance1UITests */,
 				0652C2BF2E5A343A00739D3A /* Products */,
+				0652C3042E5B27B400739D3A /* Urbanist-VariableFont_wght.ttf */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +231,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0652C3052E5B27B400739D3A /* Urbanist-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +417,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Behance1/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -436,6 +457,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Behance1/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
