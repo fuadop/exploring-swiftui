@@ -90,6 +90,8 @@ struct Goals: View {
           Spacer()
         }
         
+        WeekCalendar()
+        
         ForEach(goals, id: \.self.title) { title, subTitle, imageName, primaryColor, secondaryColor, progress, rotation in
           HStack(spacing: 10) {
             GoalCheckmark()

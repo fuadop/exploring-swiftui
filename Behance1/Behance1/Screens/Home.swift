@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeScreen: View {
   var body: some View {
     ZStack {
-      Palette.whiteDark
+      Palette.teal
         .ignoresSafeArea()
       
       VStack {
@@ -60,6 +60,7 @@ struct HomeScreen: View {
             Metrics()
             HabitChallenge()
             Goals()
+              .padding(.bottom, 130)
           }
           .padding()
         }
